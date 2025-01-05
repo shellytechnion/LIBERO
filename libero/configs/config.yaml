@@ -34,7 +34,7 @@ load_in_4bit: false
 center_crop: true
 task_suite_name: libero_spatial
 num_steps_wait: 10
-num_trials_per_task: 20
+num_trials_per_task: 30
 local_log_dir: ./experiments/logs
 
 ######### calibration config
