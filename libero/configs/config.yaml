@@ -22,17 +22,17 @@ task_embedding_format: "bert"
 task_embedding_one_hot_offset: 1
 pretrain: false
 pretrain_model_path: ""
-benchmark_name: "LIBERO_SPATIAL"
+benchmark_name: "LIBERO_OBJECT"
 
 
 
 ######### open vla configs
 model_family: openvla
-pretrained_checkpoint: openvla/openvla-7b-finetuned-libero-spatial
+pretrained_checkpoint: openvla/openvla-7b-finetuned-libero-object #openvla/openvla-7b-finetuned-libero-spatial
 load_in_8bit: false
 load_in_4bit: false
 center_crop: true
-task_suite_name: libero_spatial
+task_suite_name: libero_object
 num_steps_wait: 10
 num_trials_per_task: 30
 local_log_dir: ./experiments/logs
