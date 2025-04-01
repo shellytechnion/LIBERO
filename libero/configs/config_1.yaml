@@ -1,0 +1,43 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - data: default
+  - policy: bc_transformer_policy
+  - train: default
+  - eval: default
+  - lifelong: base
+  - test: null
+
+seed: 10000
+use_wandb: true
+wandb_project: "openVLA"
+wandb_entity: "shellyfra"
+folder: null # use default path
+bddl_folder: null # use default path
+init_states_folder: null # use default path
+load_previous_model: false
+device: "cuda:0"
+task_embedding_format: "bert"
+task_embedding_one_hot_offset: 1
+pretrain: false
+pretrain_model_path: ""
+benchmark_name: "LIBERO_SPATIAL"
+
+
+
+######### open vla configs
+model_family: openvla
+pretrained_checkpoint: openvla/openvla-7b-finetuned-libero-spatial
+load_in_8bit: false
+load_in_4bit: false
+center_crop: true
+task_suite_name: libero_spatial
+num_steps_wait: 10
+num_trials_per_task: 20
+local_log_dir: ./experiments/logs
+
+######### calibration config
+action_calibration_type: "min"
+episode_calibration_type: "min"
+
